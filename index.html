@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloco de Notas Online</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <textarea id="text-area"></textarea>
+
+            <div class="config-form">
+                <select id="font-size" onchange="cFont(this.value)">
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12" selected>12</option>
+                    <option value="14">14</option>
+                    <option value="16">16</option>
+                    <option value="18">18</option>
+                    <option value="20">20</option>
+                    <option value="22">22</option>
+                    <option value="24">24</option>
+                    <option value="26">26</option>
+                    <option value="28">28</option>
+                    <option value="32">32</option>
+                    <option value="36">36</option>
+                    <option value="39">39</option>
+                    <option value="42">42</option>
+                    <option value="48">48</option>
+                    <option value="72">72</option>
+                </select>
+
+                <select id="name-font" onchange="nFont(this.value)">
+                    <option value="0" selected disabled>Selecionar Fonte</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet">Trebuchet</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Brush Script MT">Brush Script MT</option>
+                </select>
+
+                <select onchange="tFont(this.value)">
+                    <option value="0" selected disabled>Estilo da Fonte</option>
+                    <option value="normal">Regular</option>
+                    <option value="italic">Itálico</option>
+                    <option value="bold">Negrito</option>
+                    <option value="i-a">Itálico e Negrito</option>
+                </select>
+                <select onchange="cLine(this.value)">
+                    <option value="0" selected disabled>Linhas na Fonte</option>
+                    <option value="none">Sem linhas</option>
+                    <option value="underline">Linha em baixo</option>
+                    <option value="overline">Linha em cima</option>
+                    <option value="underline overline">Linha em cima e em baixo</option>
+                    <option value="line-through">Linha no centro</option>
+                </select>
+
+                <input type="color" onchange="cColor(this.value)">
+
+            </div>
+
+            <div class="buttons-form">
+                <button type="button" class="button-form button-delete" onclick="deleteText()">Limpar Tudo</button>
+                <button type="button" class="button-form button-copy" onclick="copyText()">Copiar Tudo</button>
+            </div>
+        </form>
+
+        <div class="text">
+            <h1>Bloco de Notas Online</h1>
+            <p>Crie seus textos totalmente online pelo nosso Bloco de Notas Online e sem nenhum custo!</p>
+        </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
