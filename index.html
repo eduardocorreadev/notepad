@@ -1,25 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
+    <!-- Meta Tags -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>Bloco de Notas Online</title>
-    
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- link to style document -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
+    <!-- Container -->
     <div class="container">
-        <form action="">
+        <!-- Form -->
+        <form>
+            <!-- Text Area -->
             <textarea id="text-area"></textarea>
 
+            <!-- Config notepad -->
             <div class="config-form">
+
+                <!-- FontSize -->
                 <select id="font-size" onchange="cFont(this.value)">
+                    <option selected disabled>Tamanho da Fonte</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
-                    <option value="12" selected>12</option>
+                    <option value="12">12</option>
                     <option value="14">14</option>
                     <option value="16">16</option>
                     <option value="18">18</option>
@@ -36,6 +51,7 @@
                     <option value="72">72</option>
                 </select>
 
+                <!-- Name Font -->
                 <select id="name-font" onchange="nFont(this.value)">
                     <option value="0" selected disabled>Selecionar Fonte</option>
                     <option value="Arial">Arial</option>
@@ -50,6 +66,7 @@
                     <option value="Brush Script MT">Brush Script MT</option>
                 </select>
 
+                <!-- Line in font -->
                 <select onchange="cLine(this.value)">
                     <option value="0" selected disabled>Linhas na Fonte</option>
                     <option value="none">Sem linhas</option>
@@ -59,21 +76,26 @@
                     <option value="line-through">Linha no centro</option>
                 </select>
 
-                <input type="color" onchange="cColor(this.value)">
+                <!-- Font Color -->
+                <input type="color" id="text-color" onchange="cColor(this.value)">
 
             </div>
 
+            <!-- Bottons utils -->
             <div class="buttons-form">
                 <button type="button" class="button-form button-delete" onclick="deleteText()">Limpar Tudo</button>
                 <button type="button" class="button-form button-copy" onclick="copyText()">Copiar Tudo</button>
             </div>
         </form>
 
+        <!-- Text of down -->
         <div class="text">
             <h1>Bloco de Notas Online</h1>
             <p>Crie seus textos totalmente online pelo nosso Bloco de Notas Online e sem nenhum custo!</p>
         </div>
 
-    <script src="main.js"></script>
+        <!-- importing javascript documents -->
+        <script src="main.js"></script>
 </body>
+
 </html>

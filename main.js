@@ -42,6 +42,8 @@ if (typeof (Storage) !== "undefined") {
     textArea.style.textDecoration = getLocal('font-line')
     textArea.style.color = getLocal('font-color')
 
+    document.getElementById('text-color').value = getLocal('font-color')
+
 } else {
     alert('Seu navegador não suporta Storage!')
 }
