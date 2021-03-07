@@ -5,6 +5,10 @@ function setLocal(name, value) {
     localStorage.setItem(name, value)
 }
 
+function getLocal(name) {
+    return localStorage.getItem(name)
+}
+
 textArea.addEventListener('keydown', () => {
     setLocal('bloco', textArea.value)
 })
@@ -17,10 +21,6 @@ function cFont(size) {
 function nFont(name) {
     textArea.style.fontFamily = name
     setLocal('font-name', name)
-}
-
-function tFont(type) {
-    textArea.style.color = 'red'
 }
 
 function cLine(line) {
@@ -36,11 +36,11 @@ function cColor(color) {
 
 if (typeof (Storage) !== "undefined") {
 
-    textArea.innerHTML = localStorage.getItem('bloco')
-    textArea.style.fontSize = localStorage.getItem('font-size')
-    textArea.style.fontFamily = localStorage.getItem('font-name')
-    textArea.style.textDecoration = localStorage.getItem('font-line')
-    textArea.style.color = localStorage.getItem('font-color')
+    textArea.innerHTML = getLocal('bloco')
+    textArea.style.fontSize = getLocal('font-size')
+    textArea.style.fontFamily = getLocal('font-name')
+    textArea.style.textDecoration = getLocal('font-line')
+    textArea.style.color = getLocal('font-color')
 
 } else {
     alert('Seu navegador não suporta Storage!')
